@@ -1,26 +1,24 @@
 import './App.css';
-import Banner from './components/Banner/Banner';
 import Navbar from './components/Navbar/Navbar';
-import Product from './components/Product/Product';
+import Home from './components/Home/Home';
+import Notfound from './components/Notfound/Notfound';
+import { Route, Routes } from 'react-router';  
+import Footer from './components/Footer/Footer';
+
 
 
 function App() {
   return (
     <div className="App">
       <Navbar></Navbar>
-      <Banner></Banner>
-
-      <div className='container py-5'>
-        <h2 class="text-2xl font-medium text-gray-800 uppercase mb-6 text-start">recomended for you</h2>
-        <div className='grid grid-cols-4 gap-6'>
-          <Product></Product>
-          <Product></Product>
-          <Product></Product>
-          <Product></Product>
-          <Product></Product>
-        </div>
-      </div>
-
+      <Routes>
+        <Route path='/' element={<Home></Home>} />
+        <Route path='/carts' element={<Home></Home>} />
+        <Route path='/products' element={<Home></Home>} />
+        <Route path='/products/:productId' element={<Home></Home>} />
+        <Route path='*' element={<Notfound></Notfound>} />
+      </Routes>
+      <Footer></Footer>
     </div>
   );
 }
