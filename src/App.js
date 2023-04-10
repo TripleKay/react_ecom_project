@@ -4,6 +4,7 @@ import Home from './components/Home/Home';
 import Notfound from './components/Notfound/Notfound';
 import { Route, Routes } from 'react-router';  
 import Footer from './components/Footer/Footer';
+import ProductDetail from './components/Product/ProductDetail';
 
 
 
@@ -15,7 +16,7 @@ function App() {
         <Route path='/' element={<Home></Home>} />
         <Route path='/carts' element={<Home></Home>} />
         <Route path='/products' element={<Home></Home>} />
-        <Route path='/products/:productId' element={<Home></Home>} />
+        <Route path='/products/:productId' element={<ProductDetail></ProductDetail>} />
         <Route path='*' element={<Notfound></Notfound>} />
       </Routes>
       <Footer></Footer>

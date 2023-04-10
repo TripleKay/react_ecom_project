@@ -29,5 +29,6 @@ export const productSlice = createSlice({
 export const {fetchProducts,selectedProduct,removeSelectedProduct} = productSlice.actions;
 
 export const getAllProducts = state => state.productReducer.products;
+export const getProductDetail = state => state.productReducer.product;
 //export reducers
 export default productSlice.reducer;
